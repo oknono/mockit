@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import praw
 import sys
 from time import time
@@ -9,8 +12,11 @@ def list_top_post(name, limit=100):
     
     '''Return a specified number of most popular post from a specified subreddit'''
     subreddit = r.get_subreddit(name)
-    for index, post in enumerate(subreddit.get_top_from_all(limit=limit), 1):
-        print index, post.title
+    #for index, post in enumerate(subreddit.get_top_from_all(limit=limit), 1):
+    #    print index, post.title
+    for post in subreddit.get_top_from_all(limit=limit):
+        print post.title.encode('utf-8')
+
 
 #list_top_post()
 #print ""
