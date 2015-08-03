@@ -3,7 +3,6 @@
 
 from random import choice
 import sys
-from mockit_praw import list_top_post
 
 def generateModel(text, order):
     model = {}
