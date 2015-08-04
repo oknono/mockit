@@ -14,11 +14,7 @@ def generate_post(sub='relationships', limit=None):
     '''Given a subreddit, return a fake post'''
     title = generate_post_title(sub, 8, 120)
     post = generate_post_body(sub, 6, 500)
-    print "Title:"
-    print title
-    print 
-    print "Body:"
-    print post
+    return title, post
 
 def title_string(sub, limit=100): 
     '''Return string containing the titles of a specified number of most popular 
